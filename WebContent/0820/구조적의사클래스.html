@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>구조적 의사클래스</title>
+	<link rel="stylesheet" href="../css/publicstyle.css">
+	<style>
+		th, td{
+			width: 100px;
+			height: 30px;
+		}
+		td{
+			text-align: center;
+		}
+		tr:nth-child(1){
+			background: yellow;
+		}
+		tr:nth-child(2n){
+			background: lightgreen;
+		}		
+		#tab2 td:nth-child(1){
+			background: #ffa98f;
+		}
+		#tab2 td:nth-child(2){
+			background: #ffbda3;
+		}
+		#tab2 td:nth-child(3){
+			background: #ffd1b7;
+		}
+	</style>
+</head>
+<body>
+	<pre>
+		구조적 의사클래스
+			- 선택자:nth-child(인덱스)
+			- 선택자:nth-child(2n)
+			
+			tr:nth-child(1){
+				background: yellow;
+			}
+			tr:nth-child(2n){
+				background: lightgreen;
+			}		
+			#tab2 td:nth-child(1){
+				background: #ffa98f;
+			}
+			#tab2 td:nth-child(2){
+				background: #ffbda3;
+			}
+			#tab2 td:nth-child(3){
+				background: #ffd1b7;
+			}
+			
+	</pre>
+	<table border="1">
+		<tr>
+			<th>첫번째</th>
+			<th>두번째</th>
+			<th>세번째</th>
+		</tr>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	</table>
+	<br>
+	<table id="tab2" border="1">
+		<tr>
+			<th>첫번째</th>
+			<th>두번째</th>
+			<th>세번째</th>
+		</tr>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	</table>
+</body>
+</html>

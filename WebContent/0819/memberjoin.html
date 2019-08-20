@@ -3,15 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<title>회원가입 화면</title>
+	<style>
+		label{
+			display: inline-block;
+			width: 80px;
+			height: 25px;
+		}
+		form{
+			text-align: center;
+		}
+		h1{
+			text-align: center;
+		}
+		input{
+			background: lightblue;
+		}
+		input[type=submit]{
+			background: lightgreen;
+		}
+		input[type=submit]:hover{
+			background: pink;
+		}
+		input[type=submit]:active{
+			background: crimson;
+		}
+		input[type=text]{
+			border: 2px solid blue;
+		}
+		input[type=adress]{
+			border: 2px solid blue;
+		}
+		input[type=email]{
+			border: 2px solid blue;
+		}
+		input[type=reset]{
+			background: magenta;
+		}
+		input[type=sex]{
+			background: crimson;
+		}
+	</style>
 </head>
 
 <body>
 	<h1>회원 가입 화면</h1>
 	<form action="memberjoin.jsp" method="post">
-		이름 : <input type="text" name="name"><br>
-		주소 : <input type="adress" name="adress"><br>
-		이메일 : <input type="email" name="email"><br>
-		<input type="radio" name="sex" value="Male">Male<br>
+		<label>이름 : </label><input type="text" name="name"><br>
+		<label>주소 : </label><input type="adress" name="adress"><br>
+		<label>이메일 : </label><input type="email" name="email"><br>
+		<input type="radio" name="sex" value="Male">Male
 		<input type="radio" name="sex" value="Female">Female<br>
 		<input type="submit" name="send" value="Send">
 		<input type="reset" value="원래대로">
