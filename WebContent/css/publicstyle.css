@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+pre{
+    background      : pink;
+    border-top      : 2px dotted orange;
+    border-bottom   : 5px solid red;
+    padding-top     : 10px;
+    font-size       : 1.3em;    
+}

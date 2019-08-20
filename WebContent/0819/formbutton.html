@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="../css/publicstyle.css">
+	<style>
+		fieldset {
+			width: 300px;
+/* 			height: 50px; */
+		}
+		legend {
+			background: #a7f3d1;
+		}
+		form {
+			border: 5px solid blue;
+			margin: 20px;
+			padding: 20px;
+			
+		}
+		span {
+			color: red;
+			font-size: 1.5em;
+			
+		}
+	</style>
+	
+	<script>
+		function proc(){
+			idval = document.ff.id.value;
+			passval = document.ff.pass.value;
+			
+			document.ff.action = "f1.jsp?id=" + idval + "&pass=" + passval;
+			document.ff.submit();
+		}
+	</script>
+</head>
+
+<body>
+	<pre>
+		전송기능 (form태그의 action에 지장된 서버페이지가 실행 되어진다.)
+			- input type="submit"
+			- button type="submit"
+			- input type="image"
+			- button
+		
+		일반버튼 (전송기능이 없다. script를 통해서 이벤트에 의한 기능을 부여한다.)
+			- input type="button"
+			- button type="button"
+			
+			&lt;input type="button" value="확인" <span>onclick="proc()"</span>&gt;
+			&lt;button type="button" <span>onclick="proc()"</span>&gt;확인&lt;/button&gt;
+			
+			&lt;script&gt;
+			<span>function proc(){</span>
+			idval = document.ff.id.value;
+			passval = document.ff.pass.value;
+			
+			document.ff.action = "f1.jsp?id=" + idval + "&pass=" + passval;
+			document.ff.submit();
+		}
+		&lt;/script&gt;
+		
+			
+	</pre>
+	<form action="f1.jsp" method="get">
+		<fieldset>
+			<legend>전송(type=submit)버튼-get방식</legend>
+			<input type="text" name="id" placeholder="아이디"><br>
+			<input type="password" name="pass" placeholder="비밀번호"><br>
+			<input type="submit" value="전송">
+			<button type="submit">전송</button>
+		</fieldset>
+	</form>
+	
+	<form action="f1.jsp" method="post">
+		<fieldset>
+			<legend>전송버튼-post방식</legend>
+			<input type="text" name="id" placeholder="아이디"><br>
+			<input type="password" name="pass" placeholder="비밀번호"><br>
+			<input type="image" src="../images/check.png">
+			<button>전송</button>
+		</fieldset>
+	</form>
+	
+	<form name="ff">
+		<fieldset>
+			<legend>일반(type=button)버튼-script=onclick</legend>
+			<input type="text" name="id" placeholder="아이디"><br>
+			<input type="password" name="pass" placeholder="비밀번호"><br>
+			<input type="button" value="확인" onclick="proc()">
+			<button type="button" onclick="proc()">확인</button>
+		</fieldset>
+	</form>
+</body>
+
+</html>

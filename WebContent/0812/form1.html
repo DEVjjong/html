@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="../css/publicstyle.css">
+	</head>
+	
+	<body>
+		<pre>
+		입력 양식 : form
+		데이터를 입력하고 서버로 전송하기 위해서 form이 필요하다.
+		입력데이터의 형식 : text, password, textarea, select radio, checkbox, tel, email, date, month
+		전송방식 : get	: url주소뒤에 ?데이터를 붙여 전송한다.
+				post : request header속에 데이터를 감취서 보낸다.
+		</pre>
+		<br>
+		<h2>get방식으로 서버전송</h2>
+		<form action="form1.jsp" method="get">
+			이름 : <input type="text" name="name"><br>
+			아이디 : <input type="text" name="id"><br>
+			비밀번호 : <input type="password" name="pass"><br>
+			<input type="submit" value="전송">
+		</form>
+		<br>
+		<h2>post방식으로 서버전송</h2>
+		<form action="form1.jsp" method="post">
+			이름 : <input type="text" name="name"><br>
+			아이디 : <input type="text" name="id"><br>
+			비밀번호 : <input type="password" name="pass"><br>
+			<input type="submit" value="전송">
+		</form>
+	</body>
+</html>

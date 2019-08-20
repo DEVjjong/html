@@ -1,0 +1,110 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+		<title></title>
+		<style>
+			pre{
+				background : pink;
+				border-top : 2px dotted orange;
+				border-bottom : 5px solid red;
+				padding-top : 10px;
+				font-size : 1.3em;
+			}
+			
+			div{
+				border : 3px solid blue;
+				padding-left : 20px;	
+				margin : 20px;
+				width : 500px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<pre>
+			리스트 : 항목을 나열할때 쓰는것
+			번호 없는 리스트 : &lt;ul&gt;
+			번호 있는 리스트 : &lt;ol&gt;
+			리스트안에는 텍스트, a링크, 다른 리스트, 이미지가 올 수 있다.
+			
+			div태그는 논리적으로 화면을 분할해서 단락을 구성한다.
+			논리적인 요소로 분할했기 때문에 화면에는 나타나지 않는다.
+			스타일을 이용해서 물리적으로 보여지게 한다.
+		</pre>
+		<br>
+		
+		<div>
+			<p> 텍스트가 오는 경우</p>
+				<ul>
+					<li>아메리카노</li>
+					<li>카푸치노</li>
+					<li>카페오레</li>
+					<li>에스프레소</li>
+				</ul>
+		</div>
+
+		<div>
+			<p>a링크가 오는경우</p>
+			<ul>
+				<li><a href="https://www.naver.com" target="_blank">네이버</a></li>
+				<li><a href="https://www.daum.net" target="_blank">다음</a></li>
+				<li><a href="http://www.w3schools.com" target="_blank">w3schools</a></li>
+				<li><a href="http://www.w3c.org" target="_blank">w3c</a></li>
+			</ul>
+		</div>
+		
+		<div>
+			<p>이미지가 오는경우</p>
+			<ul>
+				<li><img src="../images/image.1.jpg"></img></li>
+				<li><img src="../images/image.2.jpg"></img></li>
+				<li><img src="../images/image.3.jpg"></img></li>
+				<li><img src="../images/image.4.jpg"></img></li>
+			</ul>
+		</div>
+
+		<div>
+			<p>다른 리스트가 오는경우</p>
+			<ul>
+				<li>커피
+					<ol>
+						<li>아메리카노</li>
+						<li>카페라떼</li>
+					</ol>
+				</li>
+				<li>생과일
+					<ol>
+						<li>토마토</li>
+						<li>자몽</li>
+						<li>오렌지</li>
+					</ol>
+				</li>
+				<li>과목
+					<ol>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>javascript</li>
+					</ol>
+				</li>
+				<li>쇼핑
+					<ul>
+						<li>냉장고</li>
+						<li>에어컨</li>
+						<li>세탁기</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+			
+		<div>
+			<p>a링크안에 이미지가 오는경우</p>
+			<ul>
+				<li><a href="../0807/test1.html" target="_blank"><img src="../images/image.1.jpg"></a></li>
+				<li><a href="../0807/text서식.html" target="_blank"><img src="../images/image.2.jpg"></a></li>
+				<li><a href="../0807/p_br_pre.html" target="_blank"><img src="../images/image.3.jpg"></a></li>
+				<li><a href="../0807/firstdoc.html" target="_blank"><img src="../images/image.4.jpg"></a></li>
+			</ul>
+		</div>
+
+	</body>
+</html>

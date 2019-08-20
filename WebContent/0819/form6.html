@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="../css/publicstyle.css">
+	<style>
+		fieldset {
+			width: 300px;
+/* 			height: 50px; */
+		}
+		legend {
+			background: #a7f3d1;
+		}
+		form {
+			border: 5px solid blue;
+			margin: 20px;
+			padding: 20px;
+			
+		}		
+		label{
+			display : inline-block;
+			width: 16px;
+			height: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	<pre>
+		select / option
+		- 항목리스트 에서 한개 또는 여러개를 선택
+		- 여러개를 선택시 select 태그에서 multiple="multiple" 속성을 설정
+		- 화면에 표시할 항목의 갯수 : select태그에서 size="6" 속성을 설정
+		- 초기 실행시 표시될 항목 : option태그에서 selected="selected" 속성을 설정
+		- option태그의 value속성은 서버로 전송되는 값을 설정
+		
+		input태그의 value속성은 초기실행시 화면에 표시되는 문자
+		input태그는 한줄로만 입력이 가능
+		여러줄을 입력하기 위해서는 textarrea태그를 사용
+		가로길이 : cols = ""50"" 속성
+		세로줄이 : rows -"10" 속성 
+	</pre>
+	<form>
+		<fieldset>
+			<legend>가고 싶은 나라(1개선택)</legend>
+			<select>
+				<option value="스위스">스위스</option>
+				<option value="프랑스" selected="selected">프랑스</option>
+				<option value="이탈리아" lected="selected">이탈리아</option>
+				<option value="미국">미국</option>
+				<option value="중국">중국</option>
+				<option value="베트남">베트남</option>
+				<option value="캐나다">캐나다</option>
+				<option value="호주">호주</option>
+			</select>
+		</fieldset>
+	</form>
+	
+	<form>
+		<fieldset>
+			<legend>가고 싶은 나라(중복선택)</legend>
+			<select multiple="multiple" size="6">
+				<option>스위스</option>
+				<option>프랑스</option>
+				<option>이탈리아</option>
+				<option>미국</option>
+				<option>중국</option>
+				<option>베트남</option>
+				<option>캐나다</option>
+				<option>호주</option>
+			</select>
+		</fieldset>
+	</form>
+	
+	<form>
+		<label>이름</label> <input type="text" value="abc"><br>
+		<label>제목</label> <input type="text"><br>
+		<label>이메일</label> <input type="text"><br>
+		<label>내용</label> <textarea rows="" cols="50"></textarea>
+	</form>
+	
+
+</body>
+
+</html>

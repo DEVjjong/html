@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		body{
+			background: lightgreen;
+		}
+	</style>
+	<script>
+		function korea() { 
+			colvalue = document.ff.col.value;
+			console.log(colvalue);
+			// 배경색을 변경
+			document.body.style.background = colvalue;
+			
+		}
+		
+	</script>
+</head>
+<body>
+	<form action="form3.jsp" method="post">
+		URL : <input type="url" name="url"><br>
+		점수 : <input type="number" name="num" value="100" min="0" max="500" step="50"><br>
+		숫자 : <input type="text" name="su"><br>
+<!-- 		색상 : <input type="color" name="col"><br> -->
+		<input type="submit" value="전송"><br>
+	</form>
+
+	<br>
+	<form name="ff">
+		<h3>확인 버튼 클릭하면 서버로 전송하지 않고 배경색을 변경한다.</h3>
+		- form의 action이 수행되지 않고 별도의 이벤트를 설정한다.<br>
+		- 이벤트 설정 - 태그안에서 onclick = "함수이름()"<br>
+		- 함수 정의 : function 함수이름() { }<br>
+		- 실행시에 body의 내용으로 document라는 객체를 생성<br>
+		- 생성된 document를 window형태의 브라우저에 실행되어진다.<br>
+		- script에서 form안의 요소로 접근하기 위해서는 document.form이름.요소이름.value<br>
+		색상 : <input type="color" name="col"><br>
+		<input type="button" value="확인" onclick="korea()"><br>
+		<input type="button" value="눌러보세요" name="button" onclick="alert('안녕하세요')"><br>
+	</form>
+</body>
+</html>
